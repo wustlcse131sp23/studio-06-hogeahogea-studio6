@@ -31,10 +31,19 @@ public class RecursiveMethods {
 	 * @return greatest common divisor of p and q
 	 */
 	public static int gcd(int p, int q) {
-		
+		 int i;
+	        if (p < q)
+	            i = p;
+	        else
+	            i = q;
+
+	        for (i = i; i > 1; i--) {
+	            if (p % i == 0 && q % i == 0)
+	                return i;
+	        }
+
+	        return 1;
 			// FIXME compute the gcd of p and q using recursion
-			return 0;
-		
 	}
 
 	
